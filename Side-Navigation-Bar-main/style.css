@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: url('https://wallpaperaccess.com/full/1092587.jpg');
+    background-repeat: no-repeat;
+}
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed; /*정상 문서 흐름에서 벗어나고  문서 페이지 레이아웃 안에 요소에 공간을 할당하지 않는다*/
+    z-index: -1;
+    top: 16;
+    left: 0;
+    background: linear-gradient(rgb(29, 247, 255), rgb(46, 13, 233));
+    overflow-x: hidden; /*x축 초과 요소는 숨김처리*/
+    padding-top: 20px;
+    border-top-right-radius: 10px;
+
+    a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none; /*에스터리스크(*)에서 설정을 했는데 해당 태그에서도 해야될까?*/
+        font-size: 25px;
+        color: #818181;
+        display: block; /*a태그가 inline -> block, .sidenav에 flex를 안 쓰는 이유는?*/
+    }
+    a:hover {
+        color:#f1f1f1;
+    }
+}
+
+.searchbar {
+    width: 230px;
+    height: 60px;
+    position: relative;
+    left: 10px;
+    top: 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.v_space {
+    line-height: 20px;
+}
