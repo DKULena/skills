@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /*주측을 기준으로 가운데 정렬*/
+  align-items: center; /*교차축을 기준으로 가운데 정렬*/
+  min-height: 100vh; /*요소의 최소 높이를 100vh(viweport height 100%)*/
+  background: #031321;
+}
+
+a {
+  font-family: sans-serif;
+  position: relative; /*위치를 부모를 기준으로 설정*/
+  display: inline-block;
+  padding: 15px 30px; /*내부 여백 상하(15) 좌우(30)*/
+  color: #2192f3;
+  border: 5px solid #2196f3;
+  border-radius: 50px;
+  text-transform: none; /* 텍스트 속성을 변경하지 않고 기존 값을 유지하겠다 -> 그럼 궅이 안 써도 되는거 아닌가 */
+  letter-spacing: 4px; /* 글자 간격 설정*/
+  text-decoration: none; /*마찬가지로 굳이?*/
+  font-size: 24px;
+  overflow: hidden; 
+   /*요소의 내부 여백에 컨텐츠가 맞지 않을 때 (hidden: 초과 컨텐츠를 숨김) */
+
+  transition: 0.2s; /*요소의 두 상태가 다를때(가상 클래스를 사용 - :hover, :active)F 어떤식으로 변화시킬지 - 단축 속성 */
+  /* 0.2s 시간동안 변화 */
+}
+
+a:hover {
+    color: #255784;
+    background: #2192f3;
+    border: 5px;
+    box-shadow: 0 0 70px #2196f3, 0 0 70px #2196f3, 0 0 70px #2196f3;
+    transition-delay: 0.2s; /*0.1초 딜레이 후에 transition 실행*/
+    filter:brightness(200%) /*그래픽 효과 적용 (brightness - 밝기 200%)*/
+    
+}
